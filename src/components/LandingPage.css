@@ -1,0 +1,8 @@
+.landing-image {
+    width: 40%;       /* Adjust width as needed */
+    max-width: 300px; /* Set a max-width for smaller screens */
+    margin: 20px auto; /* Center image and add spacing */
+    display: block;    /* Ensures the image is centered */
+    border-radius: 12px; /* Optional: add rounded corners */
+  }
+  

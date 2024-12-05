@@ -1,38 +1,117 @@
-.App {
-  text-align: center;
+/* App.css */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap');
+
+body {
+  background-color: #f7f2e7;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 1.6;
+  color: #2c3e50;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+.app {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: linear-gradient(135deg, #f7f2e7 0%, #f0e9db 100%);
+  padding-bottom: 80px;
+  position: relative;
+}
+
+/* Add subtle texture overlay */
+.app::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M54.627 0l.83.828-1.415 1.415L51.8 0h2.827zM5.373 0l-.83.828L5.96 2.243 8.2 0H5.374zM48.97 0l3.657 3.657-1.414 1.414L46.143 0h2.828zM11.03 0L7.372 3.657 8.787 5.07 13.857 0H11.03zm32.284 0L49.8 6.485 48.384 7.9l-7.9-7.9h2.83zM16.686 0L10.2 6.485 11.616 7.9l7.9-7.9h-2.83zM22.344 0L13.858 8.485 15.272 9.9l7.9-7.9h-.828zm5.656 0L19.515 8.485 17.343 10.657 28 0h-2.83zM32.656 0L26.172 6.485 24 8.657 34.657 0h-2zm5.657 0L30.828 7.485 28.657 9.657 39.314 0h-2.83zm5.657 0l-7.485 7.485-2.172 2.172L45.97 0h-2.83zm5.657 0l-7.485 7.485-2.172 2.172L51.627 0h-2.83zM22.344 0L13.858 8.485 15.272 9.9l7.9-7.9h-.828zm-5.657 0L9.2 7.485 7.03 9.657 17.686 0h-2zm-5.657 0L3.543 7.485l-2.172 2.172L13.03 0h-2.83zM3.715 0L0 3.715l1.414 1.414L8.485 0H3.715zm52.57 0L60 3.715l-1.414 1.414L51.515 0h4.77zM2.283 12.627l-1.414 1.414 7.485 7.485 1.414-1.414-7.485-7.485zm52.567 0l-7.485 7.485 1.415 1.414 7.485-7.485-1.415-1.414zM8.485 20.657l-7.485 7.485 1.414 1.415 7.485-7.485-1.414-1.415zm40.97 0L41.97 28.142l1.414 1.415 7.485-7.485-1.414-1.415zM14.142 26.314l-7.485 7.485 1.414 1.414 7.485-7.485-1.414-1.414zm29.656 0l-7.485 7.485 1.415 1.414 7.485-7.485-1.415-1.414zM19.8 32.97l-7.485 7.486 1.414 1.414 7.485-7.485L19.8 32.97zm18.342 0l-7.485 7.486 1.415 1.414 7.485-7.485-1.415-1.415zM25.457 39.627l-7.485 7.485 1.414 1.415 7.485-7.485-1.414-1.415zm7.07 0l-7.485 7.485 1.415 1.415 7.485-7.485-1.415-1.415z' fill='%23000000' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Navigation styles */
+.nav-menu {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Landing Page styles */
+.landing-page {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.landing-page h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.landing-image {
+  width: 60%;
+  max-width: 600px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 2rem auto;
+  transition: transform 0.3s ease;
+}
+
+.landing-image:hover {
+  transform: scale(1.02);
+}
+
+.quote {
+  margin: 3rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.quote p {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: #34495e;
+  line-height: 1.8;
+}
+
+.timeline-button {
+  background-color: #34495e;
   color: white;
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.App-link {
-  color: #61dafb;
+.timeline-button:hover {
+  background-color: #2c3e50;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive design */
+@media (max-width: 768px) {
+  .landing-page h1 {
+    font-size: 2.5rem;
   }
-  to {
-    transform: rotate(360deg);
+
+  .landing-image {
+    width: 90%;
+  }
+
+  .quote p {
+    font-size: 1.2rem;
   }
 }
+  

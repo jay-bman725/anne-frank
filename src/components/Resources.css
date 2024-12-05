@@ -1,0 +1,24 @@
+.resources {
+  padding: 40px;
+  background: #f7f2e7;
+}
+
+.resource-list {
+  list-style: none;
+  padding: 0;
+}
+
+.resource-item {
+  margin-bottom: 15px;
+}
+
+.resource-item a {
+  color: #2c3e50;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.resource-item a:hover {
+  color: #34495e;
+}
